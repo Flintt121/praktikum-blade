@@ -8,7 +8,6 @@ class MahasiswaController extends Controller
         $nama = 'Atha';
         $nim = '2300012345';
         $prodi = 'Informatika';
-
         return view('mahasiswa.profil', compact(
             'nama',
             'nim',
@@ -22,7 +21,7 @@ class MahasiswaController extends Controller
             ['nama' => 'Raul', 'nim' => '23002', 'ipk' => 3.20],
             ['nama' => 'Icha', 'nim' => '23003', 'ipk' => 2.75],
             ['nama' => 'Wanda', 'nim' => '23004', 'ipk' => 3.55],
-            ['nama' => 'Tama', 'nim' => '23005', 'ipk' => 2.70],
+            ['nama' => 'Tama', 'nim' => '23005', 'ipk' => 1.85],
         ];
         return view('mahasiswa.daftar', compact('mahasiswa'));
     }
@@ -33,7 +32,7 @@ class MahasiswaController extends Controller
             ['nama' => 'Raul', 'nim' => '23002', 'ipk' => 3.20],
             ['nama' => 'Icha', 'nim' => '23003', 'ipk' => 2.75],
             ['nama' => 'Wanda', 'nim' => '23004', 'ipk' => 3.55],
-            ['nama' => 'Tama', 'nim' => '23005', 'ipk' => 2.70],
+            ['nama' => 'Tama', 'nim' => '23005', 'ipk' => 1.85],
         ];
         $data = collect($mahasiswa)->firstWhere('nim', $nim);
         abort_if(!$data, 404);
